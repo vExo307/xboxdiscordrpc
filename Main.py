@@ -28,6 +28,7 @@ def getStatus():
 currentgameid = 0
 timeelapsed = 0
 
+       
 RPC = Presence(data["clientid"],pipe=data["client"])
 RPC.connect()
 while True:
@@ -42,8 +43,10 @@ while True:
     if(gameid != currentgameid):
         timeelapsed = int(time.time())
         currentgameid = gameid
-    RPC.update(state=f"Playing {game}", details=f"{gamestate} | Using {device}", start=timeelapsed)
+    #print(f"Playing {game} {gamestate} | Using {device}") DEBUG CODE
+    RPC.update(state=f"Playing {game}", details=f"{gamestate} | Using {device}", start=timeelapsed, large_image="xbox", large_text="https://github.com/vExo307/xboxdiscordrpc")
     time.sleep(data["updatedelay"])
+   
 
 
 
