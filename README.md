@@ -12,7 +12,7 @@ When you download it you will have 3 files; Main.py, Config.json, and requirment
 
 ### How to use this program 
 Once you configure the program we can get to the fun part using it! Make sure you have python version 3.8 installed, and use the following command
-> pip3 install requirements.txt 
+> pip3 install -r requirements.txt 
 >
 Once this is done you use the following command
 > python3 main.py
